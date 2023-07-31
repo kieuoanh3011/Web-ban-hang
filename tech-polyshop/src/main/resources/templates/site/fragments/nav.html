@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+
+  </head>
+  <body>
+    <div th:fragment="nav">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">PIN-KAT</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" 
+          data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home"><i class="fas fa-home    "></i> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-phone    "></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
+                aria-expanded="false"><i class="fas fa-user    "></i> Profile</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/home/login">Login</a>
+                <a class="dropdown-item" href="/home/register">register</a>
+                <a class="dropdown-item" href="#">Forgot password</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+            
+          </ul>
+          <span class="navbar-text">
+            <a href="/home/cartitem" class="btn btn-primary"><i class="fas fa-cart-plus    "></i></a>
+          </span>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

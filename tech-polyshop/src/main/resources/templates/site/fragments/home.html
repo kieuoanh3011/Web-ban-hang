@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{site/dashboardLayout.html}">
+  <head>
+
+  </head>
+  <body layout:fragment="content">
+    <section class="row" >
+    <article class="col-9">
+        <div th:each="item : ${product}">
+            <div class="card float-left" style="width: 17rem;">
+                <img class="card-img-top" src="/images/ao1.jpg" alt="Card image cap" title="MONSTER">
+                <div class="card-body">
+                  <h5 class="card-title" th:utext="${item.name}"></h5>
+                  <p class="card-text" th:utext="${item.unitPrice}"></p>
+                  <a th:href="@{'/home/cartitem/add/' + ${item.productId}}" class="btn btn-primary float-right"><i class="fas fa-cart-plus    "></i></a>
+                </div>
+              </div>
+        </div>
+          
+        </article>
+        <aside class="col-3">
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item active">Danh mục</li>
+                    <li class="list-group-item">Áo thun</li>
+                    <li class="list-group-item">Áo khoác Hoodie</li>
+                    <li class="list-group-item">Áo Sơ mi</li>
+                    <li class="list-group-item">Quần</li>
+                  </ul>
+            </div>
+        </aside>
+    </section>
+</body>
+</html>
